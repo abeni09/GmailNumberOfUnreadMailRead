@@ -25,17 +25,15 @@ public class GmailNewMailReader {
 //Launch the some site
             driver.get(url);
             //Provide Email
-            var username= "abenij09";
+            var username= "";
             //Provide password
-            var password= "gmailayaskm";
+            var password= "";
             driver.findElement(By.xpath("//*[@type=\"email\"]")).clear();
             driver.findElement(By.xpath("//*[@type=\"email\"]")).sendKeys(username,Keys.ENTER);
             System.out.println("Username entered");
             //Thread.sleep(3000);
 
             driver.findElement(By.xpath("//*[@id=\"Passwd\"]")).clear();
-            Thread.sleep(1000);
-
             driver.findElement(By.xpath("//*[@id=\"Passwd\"]")).sendKeys(username,Keys.ENTER);
             System.out.println("Password entered");
 
@@ -51,10 +49,6 @@ public class GmailNewMailReader {
 
             }
             System.out.println("All unread inbox mails are printed");
-
-// Print a Log In message to the screen
-            //System.out.println("Successfully Logged In");
-
             driver.quit();
         }
     }
